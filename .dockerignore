@@ -1,0 +1,29 @@
+# Ignorar archivos temporales y carpetas
+*.log
+*.tmp
+*.swp
+
+# Ignorar carpetas de control de versiones
+.git
+.gitignore
+
+# Ignorar archivos de configuración locales
+.env
+.DS_Store
+
+# Ignorar archivos de IDEs o editores
+.vscode/
+.idea/
+*.sublime*
+
+# Ignorar archivos de compilación y dependencias locales
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+__pycache__/
+*.py[cod]
+
+# Ignorar contenido temporal de WordPress (si es necesario)
+wordpress/wp-content/uploads/
+wordpress/wp-content/cache/

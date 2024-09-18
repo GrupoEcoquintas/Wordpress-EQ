@@ -1,0 +1,43 @@
+services:
+  wordpress:
+    image: wordpress:latest
+    container_name: wordpress
+    ports:
+      - "3000:80"  # Cambiado a puerto 3000 para evitar conflictos con otros servicios
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: admineq
+      WORDPRESS_DB_PASSWORD: Eco2024$
+      WORDPRESS_DB_NAME: wp-ecoquintas
+      SERVER_NAME: localhost  # Configurar ServerName para evitar advertencias de Apache
+    volumes:
+      - ./wordpress:/var/www/html  # Montar el directorio de WordPress para persistencia de datos
+    depends_on:
+      - db
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  db:
+    image: mysql:5.7
+    container_name: wordpressdb
+    environment:
+      MYSQL_DATABASE: wp-ecoquintas
+      MYSQL_USER: admineq
+      MYSQL_PASSWORD: Eco2024$
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_TCP_PORT: 3306  # Asegurando que el puerto es el correcto
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+volumes:
+  db_data:
