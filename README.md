@@ -4,10 +4,11 @@ Este repositorio contiene la información y configuración necesaria para la pá
 
 ## Autor
 
-- **Juan Miguel Fernandez Araya**
-- **Guadalupe Gonzalez Pérez**
-- **Luis Roberto Zúñiga Sánchez**  
-- **Lisbeth Vazquez Serrano**
+   - **Juan Miguel Fernandez Araya**
+   - **Guadalupe Gonzalez Pérez**
+   - **Luis Roberto Zúñiga Sánchez**  
+   - **Lisbeth Vazquez Serrano**
+
 Departamento de Tecnologías de Información  
 Grupo Ecoquintas
 
