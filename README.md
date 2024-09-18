@@ -20,11 +20,17 @@ Grupo Ecoquintas
 ## Instalación
 
 1. Clona el repositorio:
+   ```bash
    git clone https://github.com/GrupoEcoquintas/Wordpress-EQ.git
-2. Navega al directorio del proyecto:
+   ```
+3. Navega al directorio del proyecto:
+    ```bash
     cd tu-repositorio
-3. Construye y despliega los contenedores:
+    ```
+5. Construye y despliega los contenedores:
+   ```bash
    docker compose up --build -d
+   ```
 4.Accede a la página web desde tu navegador en http://localhost:3000.
 
 ## Servicios
@@ -33,9 +39,11 @@ MySQL: La base de datos se ejecuta en el puerto interno 3306.
 
 ## Notas
 Si encuentras un error de permisos en Apache ("Forbidden"), elimina la carpeta wordpress, ejecuta:
+```bash
    docker compose down
    rm -rf wordpress
    docker compose up --build -d
+ ```
 ## Contacto
 Para cualquier duda o consulta, puedes contactar a Juan Miguel Fernandez Araya, por medio de la extension 146  o al correo jfernandez@ecoquintas.com, Departamento de Tecnologías de Información en Grupo Ecoquintas.
 
